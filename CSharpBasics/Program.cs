@@ -22,3 +22,26 @@
 //     }
 // }
 //
+
+
+using System;
+using System.Linq;
+
+namespace CSharpBasics
+{
+    public class Program
+    {
+        
+        static void print(string input)
+        {
+            System.Console.WriteLine(input);
+        }
+        
+        public static void Main(string[] args)
+        {
+            print("Hello from program");
+        }
+        
+    }
+}
+

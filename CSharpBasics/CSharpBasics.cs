@@ -17,6 +17,7 @@
 using System;
 using System.Security.Cryptography;
 using System.Linq;
+using System.Net.Sockets;
 
 
 // C# ignores whitespaces
@@ -384,6 +385,9 @@ static void MyMethod()
 
 MyMethod();
 
+
+// ===== PARAMETERS =====
+
 // Returning an integer
 int AddTwoIntegers(int x, int y)
 {
@@ -392,3 +396,73 @@ int AddTwoIntegers(int x, int y)
 
 int result = AddTwoIntegers(x: 5, y: 8);
 Console.WriteLine(result);
+
+
+// Different types of parameters
+void NameAndAge(string name, int age)
+{
+    Console.WriteLine($"My name is {name} and I am {age} years old.");
+}
+
+
+// Default parameters
+string ConfirmUsername(string userName = "none provided")
+{
+    string message = $"You entered: {userName}";
+    return message;
+}
+
+Console.WriteLine(ConfirmUsername());
+
+
+// Names arguments (specifying some arguments only)
+void PrintNumbers(int num1 = 5, int num2 = 10, int num3 = 15)
+{
+    Console.WriteLine($"Numbers are: {num1}, {num2}, {num3}");
+}
+PrintNumbers(num2: 1000);
+
+
+// Returning an array?
+// Array as input?
+
+
+
+// ===== METHOD OVERLOADING =====
+
+// Declaring the same method twice with different parameter data types to handle both (instead of defining two separate functions)
+// Couldn't declare multiple times at top level so put inside the AdditionClass class below.
+
+int additionResult = AdditionFunctions.Add(4, 76);
+Console.WriteLine(additionResult);
+
+
+// ========================================================
+// ======================= CLASSES ========================
+// ========================================================
+
+class AdditionFunctions
+{
+    
+    // int
+    public static int Add(int num1, int num2)
+    {
+        return num1 + num2;
+    }
+    
+    // float
+    public static float Add(float num1F, float num2F)
+    {
+        return num1F + num2F;
+    }
+    
+    // double
+    public static double Add(double num1, double num2)
+    {
+        return num1 + num2;
+    }
+    
+}
+
+
+
