@@ -1,47 +1,32 @@
-// using System;
-// using System.Collections.Generic;
-// using System.Linq;
-// using System.Threading.Tasks;
-// using Microsoft.AspNetCore.Hosting;
-// using Microsoft.Extensions.Configuration;
-// using Microsoft.Extensions.Hosting;
-// using Microsoft.Extensions.Logging;
-//
-// namespace CSharpBasics
-// {
-//     public class Program
-//     {
-//         public static void Main(string[] args)
-//         {
-//             CreateHostBuilder(args).Build().Run();
-//         }
-//
-//         public static IHostBuilder CreateHostBuilder(string[] args) =>
-//             Host.CreateDefaultBuilder(args)
-//                 .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
-//     }
-// }
-//
-
-
+﻿
 using System;
-using System.Linq;
 
 namespace CSharpBasics
 {
-    public class Program
+    
+    class Program
     {
-        
-        static void print(string input)
+        static void Main(string[] args)
         {
-            System.Console.WriteLine(input);
+
+            Car carInstance1 = new Car(carBrand:"Toyota", carOdometer:345);
+            Console.WriteLine($"Brand: {carInstance1.brand}");
+            Console.WriteLine($"Odometer: {carInstance1.odometer}");
+
+            Person personInstance1 = new Person();
+            // Console.WriteLine(personInstance1.Name);
+            Person myObj = new Person();
+            myObj.Name = "Liam";
+            Console.WriteLine(myObj.Name);
+            
+            Computer myComputer = new Computer();
+            Console.WriteLine($"Computer name: {myComputer.Name}");
+
+            Table tableInstance = new Table();
+            tableInstance.id = 0;
+            tableInstance.price = 200;
+            
+
         }
-        
-        public static void Main(string[] args)
-        {
-            print("Hello from program");
-        }
-        
     }
 }
-
