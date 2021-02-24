@@ -1,6 +1,17 @@
-//
-//
-//
+
+
+// // NOTE:
+// // .NET Core 5.0 facilitates top-level statements such as:
+
+// using System;
+// Console.WriteLine("Hello, World!");
+
+// // However this changes the entry point of the application from the Main() method to these top-level statements, and the Main() method won't be used.
+// // So this file was only used to quickly learn the basics up until learning classes, at which point I commented out everything and used Program.cs and Classes.cs 
+
+
+
+
 // // /*
 // //  * NOTES
 // //  *
@@ -436,7 +447,7 @@
 //
 // class AdditionFunctions
 // {
-//     
+//      
 //     // int
 //     public static int Add(int num1, int num2)
 //     {
